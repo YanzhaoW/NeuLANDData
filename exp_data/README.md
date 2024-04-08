@@ -12,3 +12,17 @@ Information:
     * 0.00087
     * 0.000923
     * 0.00175
+
+PhaseSpaceGenerator code:
+```cpp
+auto gen = std::make_unique<R3BPhaseSpaceGenerator>();
+gen->Beam.SetEnergyDistribution(R3BDistribution1D::Delta(883.));
+gen->SetErelDistribution(R3BDistribution1D::Flat(0.,10000.));
+// at least two particles are required; it will add their energy
+// and make an InitVec(0,0,0,TotE_GeV) - this information is needed
+// for SetDecay()
+gen->AddParticle(50,123);
+gen->AddParticle(2112);
+// Dump the User settings
+primGen->AddGenerator(gen.release());
+```

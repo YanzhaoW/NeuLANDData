@@ -8,3 +8,7 @@ Information:
 - Beam energy: 904 MeV/u
 - Beam energy at the target: 883 MeV/u
 - Outgoing neutron energy: 30 MeV (at fragment reference frame)
+- Saturation factor:
+    * 0.00087
+    * 0.000923
+    * 0.00175
